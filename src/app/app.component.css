@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+}
+
+.col {
+    width: 50%;
+}
