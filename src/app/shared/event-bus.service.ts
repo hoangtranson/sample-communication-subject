@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
-
+import { EventData } from 'src/app/shared/event.class';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +11,13 @@ export class EventBusService {
 
   constructor() { }
 
-  emit(event) {
+  emit(event: EventData) {
     this.subject$.next(event);
   }
 
-  on(event, action): Subscription {
+  on(eventName: string, action: any): Subscription {
     return this.subject$.pipe(
-      filter( e => e["name"] === event),
-      map( e => e["value"])).subscribe(action);
+      filter( (e: EventData) => e.name === eventName),
+      map( (e: EventData) => e["value"])).subscribe(action);
   }
 }

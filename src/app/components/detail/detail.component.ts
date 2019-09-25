@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
+  detail = {
+      "id": 0,
+      "title": "XXX",
+      "body": "xxxxxxxxxxxxxxxxxxxxxxxxx"
+  }
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
