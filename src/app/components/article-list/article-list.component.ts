@@ -16,6 +16,6 @@ export class ArticleListComponent implements OnInit {
   }
 
   viewArticle(article) {
-    this.eventBusService.emit(new EventData('selectArticleDetail', article));
+    this.eventBusService.emit(new EventData('SelectArticleDetail', article));
   }
 }

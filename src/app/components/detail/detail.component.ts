@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventBusService } from 'src/app/shared/event-bus.service';
 
 @Component({
   selector: 'app-detail',
@@ -12,10 +13,12 @@ export class DetailComponent implements OnInit {
       "body": "xxxxxxxxxxxxxxxxxxxxxxxxx"
   }
 
-  constructor() { }
+  constructor(private eventBusService: EventBusService) { }
 
   ngOnInit() {
-
+    this.eventBusService.on('SelectArticleDetail', data => {
+      this.detail = data;
+    })
   }
 
 }
