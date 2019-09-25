@@ -1,6 +1,13 @@
-<h2>Article List</h2>
+<h2>Testing Event Bus</h2>
 <ul>
     <li *ngFor="let item of list">
-        <a href="#" (click)="viewArticle(item)">{{item.title}}</a>
+        <a href="#" (click)="viewArticle1(item)">{{item.title}}</a>
+    </li>
+</ul>
+
+<h2>Testing Observable Service</h2>
+<ul>
+    <li *ngFor="let item of list">
+        <a href="#" (click)="viewArticle2(item)">{{item.title}}</a>
     </li>
 </ul>

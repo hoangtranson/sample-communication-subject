@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Article } from 'src/app/shared/article.interface';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'sample-communication-subject';
 
-  articles = [
+  articles: Array<Article> = [
     {
       "id": 1,
       "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
